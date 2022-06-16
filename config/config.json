@@ -1,0 +1,27 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "element-remover-by-class-spfx-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/elementRemoverByClassSpfx/ElementRemoverByClassSpfxWebPart.js",
+          "manifest": "./src/webparts/elementRemoverByClassSpfx/ElementRemoverByClassSpfxWebPart.manifest.json"
+        }
+      ]
+    },
+    "custom-by-santosh-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/customBySantosh/CustomBySantoshWebPart.js",
+          "manifest": "./src/webparts/customBySantosh/CustomBySantoshWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "ElementRemoverByClassSpfxWebPartStrings": "lib/webparts/elementRemoverByClassSpfx/loc/{locale}.js",
+    "CustomBySantoshWebPartStrings": "lib/webparts/customBySantosh/loc/{locale}.js"
+  }
+}
