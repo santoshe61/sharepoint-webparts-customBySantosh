@@ -20,6 +20,7 @@ export default class CustomBySantosh extends React.Component<
     console.log(this.props.tabsData);
     return (
       <div className={styles.customBySantosh}>
+        <h1 className={styles.title}>{this.props.title}</h1>
         <div className={styles.tabs}>
           {this.props.tabsData?.split("|")?.map((tabData, index) => {
             let [title, id] = tabData.split(":");

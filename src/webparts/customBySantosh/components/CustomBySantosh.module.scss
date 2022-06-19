@@ -1,6 +1,31 @@
 @import "~office-ui-fabric-react/dist/sass/References.scss";
 
 .customBySantosh {
+  position: sticky;
+  .title {
+    @include ms-font-xxl;
+    font-weight: $ms-font-weight-semibold;
+  }
+  .tabs {
+    .tabsTitle {
+      font-size: $ms-font-size-m;
+      font-weight: $ms-font-weight-regular;
+      height: 32px;
+      line-height: 32px;
+      padding: 0 16px;
+      background: none;
+      border: none;
+      display: block;
+      width: 100%;
+      text-align: left;
+      cursor: pointer;
+      &[class*="isActive"][id*="tab-"] {
+        color: $ms-color-themePrimary;
+        border: 1px solid $ms-color-themePrimary;
+      }
+    }
+  }
+
   .container {
     max-width: 700px;
     margin: 0px auto;
@@ -20,11 +45,6 @@
     @include ms-xl8;
     @include ms-xlPush2;
     @include ms-lgPush1;
-  }
-
-  .title {
-    @include ms-font-xl;
-    @include ms-fontColor-white;
   }
 
   .subTitle {
@@ -69,23 +89,6 @@
       margin: 0 4px;
       vertical-align: top;
       display: inline-block;
-    }
-  }
-  .tabs {
-    .tabsTitle {
-      font-size: $ms-font-size-m;
-      font-weight: $ms-font-weight-regular;
-      height: 32px;
-      line-height: 32px;
-      padding: 0 16px;
-      background: none;
-      border: none;
-      display: block;
-      cursor: pointer;
-      &[class*="isActive"] {
-        color: $ms-color-themePrimary;
-        border: 1px solid $ms-color-themePrimary;
-      }
     }
   }
 }

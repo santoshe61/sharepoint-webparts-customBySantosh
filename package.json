@@ -5,8 +5,8 @@
   "main": "lib/index.js",
   "scripts": {
     "start": "gulp serve",
-    "build": "gulp bundle",
-    "package": "gulp package-solution",
+    "build": "gulp bundle --production --ship",
+    "package": "gulp package-solution --production --ship",
     "clean": "gulp clean",
     "test": "gulp test"
   },

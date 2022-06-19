@@ -12,6 +12,7 @@ import CustomBySantosh from "./components/CustomBySantosh";
 import { ICustomBySantoshProps } from "./components/ICustomBySantoshProps";
 
 export interface ICustomBySantoshWebPartProps {
+  title: string;
   tabsData: string;
 }
 
@@ -20,6 +21,7 @@ export default class CustomBySantoshWebPart extends BaseClientSideWebPart<ICusto
     const element: React.ReactElement<ICustomBySantoshProps> =
       React.createElement(CustomBySantosh, {
         tabsData: this.properties.tabsData,
+        title: this.properties.title,
       });
 
     ReactDom.render(element, this.domElement);
@@ -41,6 +43,13 @@ export default class CustomBySantoshWebPart extends BaseClientSideWebPart<ICusto
             description: "Custom web part",
           },
           groups: [
+            {
+              groupFields: [
+                PropertyPaneTextField("title", {
+                  label: "Webpart Title",
+                }),
+              ],
+            },
             {
               groupName: "Tabs",
               groupFields: [
